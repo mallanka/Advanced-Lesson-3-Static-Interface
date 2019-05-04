@@ -37,5 +37,34 @@ namespace Advanced_Lesson_3_Static_Interface
         {
         }
 
+        static public void GuessType<T>(T item)             //AL3-P3/3. GuessType
+        {
+            switch (item)
+            {
+                case string x:
+                    Console.WriteLine($"it is a string of {x.Length} symbols");
+                    break;
+                case int x:
+                    Console.WriteLine("you entered a positive integer");
+                    break;
+                case decimal x:
+                    decimal temp = x - Math.Truncate(x);
+                    int count = 0;
+                    while (temp > 0)
+                    {
+                        temp *= 10;
+                        temp = temp - Math.Truncate(temp);
+                        count++;
+                    }
+                    Console.WriteLine($"you entered a floating-point number with {count} digits after point");
+                    break;
+                case DateTime x:
+                    Console.WriteLine($"you entered the time {x}");
+                    break;
+                default:
+                    Console.WriteLine("i don't know what did you enter");
+                    break;
+            }
+        }
     }    
 }
