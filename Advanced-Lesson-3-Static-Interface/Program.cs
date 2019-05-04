@@ -13,7 +13,6 @@ namespace Advanced_Lesson_3_Static_Interface
                 //Practice.AL3_P1_3();
 
                 //Lesson.RentPointsExample();
-
                 Console.ReadLine();
             }
         }
